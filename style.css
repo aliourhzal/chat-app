@@ -1,0 +1,406 @@
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	background-color: hsl(270, 20%, 96%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10vw;
+}
+
+.container .left_shape {
+	height: 85%;
+	width: 35%;
+	background: linear-gradient(to top right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: -180px;
+	z-index: 0;
+}
+
+.container .right_shape {
+	height: 85%;
+	width: 35%;
+	background: hsl(0, 0%, 100%);
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+	position: absolute;
+	bottom: 0;
+	right: -180px;
+	z-index: 0;
+}
+
+.container .phone {
+	height: 770px;
+	width: 420px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 43px;
+	position: relative;
+	padding: 15px;
+}
+
+.container .phone .void {
+	height: 45px;
+	width: 60%;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 30;
+	background-color: white
+}
+
+.container .phone .screen {
+	height: 100%;
+	width: 100%;
+	background-color: hsl(270, 20%, 96%);
+	border-radius: 35px;
+	overflow: hidden;
+	z-index: 0;
+	position: relative;
+}
+
+.container .phone .screen .profile_content {
+	width: 100%;
+	height: 13%;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px; 
+	background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+	padding: 0 20px 25px 20px;
+	display: flex;
+	align-items: flex-end;
+}
+
+.container .phone .screen .profile_set{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+
+.container .phone .screen .profile_set .previous{
+	position: relative;
+	height: 20px;
+	width: 5px;
+}
+
+.container .phone .screen .profile_set .previous::before{
+	content: "";
+	background-color: white;
+	position: absolute;
+	top: 0;
+	width: 3px;
+	height: 57%;
+	transform: rotate(30deg);
+	border-radius: 20px;
+}
+
+.container .phone .screen .profile_set .previous::after{
+	content: "";
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	width: 3px;
+	height: 57%;
+	transform: rotate(-30deg);
+	border-radius: 20px;
+}
+
+.container .phone .screen .profile_set .set{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 3px;
+}
+
+.container .phone .screen .profile_set .profile {
+	display: flex;
+	align-items: center;
+	position: relative;
+	gap: 10px;
+	position: absolute;
+	left: 18px;
+}
+
+.container .phone .screen .profile_set .profile .avatar {
+	height: 39px;
+	width: 39px;
+	border: 2px solid white;
+	border-radius: 50%;
+}
+
+.container .phone .screen .profile_set .profile .avatar img{
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+}
+
+.container .phone .screen .profile_set .profile .info {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.container .phone .screen .profile_set .profile .info .name{
+	color: white;
+	font-size: 16px;
+	font-family: Rubik;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+
+.container .phone .screen .profile_set .profile .info .status{
+	color: white;
+	font-size: 12px;
+	font-family: Rubik;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+
+.container .phone .screen .profile_set .set span {
+	height: 4px;
+	width: 4px;
+	border-radius: 50%;
+	background-color: white;
+}
+
+.container .phone .screen .chat {
+	width: 100%;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+
+.container .phone .screen .chat .first_chat{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 65%;
+	gap: 10px;
+}
+
+.container .phone .screen .chat .first_chat div{
+	width: 100%;
+	padding: 10px;
+	background-color: #ede5f4;
+	color: 	hsl(276, 55%, 52%);
+	border-radius: 10px 10px 10px 0;
+	font-family: Rubik;
+	font-size: 13px;
+}
+
+.container .phone .screen .chat .second_chat {
+	align-self: flex-end;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 15px;
+	width: 65%;
+}
+
+.container .phone .screen .chat .second_chat .photos img{
+	height: 65px;
+	width: 65px;
+	border-radius: 15px;
+}
+
+.container .phone .screen .chat .second_chat .msg {
+	width: fit-content;
+	align-self: flex-end;
+	color: black;
+	padding: 10px;
+	border-radius: 10px 10px 0 10px;
+	background-color: white;
+	font-size: 13px;
+	font-family: Rubik;
+}
+
+.container .phone .screen .chat .second_chat .photos {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	gap: 10px;
+	background-color: transparent;
+	padding: 0;
+}
+
+.container .phone .screen .chat .third_chat {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 15px;
+	width: 65%;
+}
+
+.container .phone .screen .chat .third_chat .msg{
+	width: 100%;
+	padding: 10px;
+	background-color: #ede5f4;
+	color: 	hsl(276, 55%, 52%);
+	border-radius: 10px 10px 10px 0;
+	font-family: Rubik;
+	font-size: 13px;
+}
+
+.container .phone .screen .chat .third_chat .pricing {
+	width: 120%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;	
+	padding: 12px 17px;
+	background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+	border-radius: 10px 10px 10px 5px;
+	color: white;
+	font-family: Rubik;
+	font-size: 12px;
+	position: relative;
+}
+
+.container .phone .screen .chat .third_chat .pricing div {
+	height: 20px;
+	width: 20px;
+	border: 1px solid white;
+	border-radius: 50%;
+}
+
+.container .phone .screen .chat .third_chat .pricing .walk {
+	position: absolute;
+	left: 44px;
+}
+
+
+.container .phone .screen .chat .third_chat .pricing .price {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.container .phone .screen .type {
+	height: 50px;
+	width: 93%;
+	border-radius: 30px;
+	background-color: white;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.container .phone .screen .type .placeholder {
+	font-family: Rubik;
+	color: hsl(206, 6%, 79%);
+	font-size: 14px;
+}
+
+
+.container .phone .screen .type .send {
+	height: 40px;
+	width: 40px;
+	background-color: hsl(271, 36%, 24%);
+	border-radius: 50%;
+	position: absolute;
+	right: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container .phone .screen .type .send .arrow {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container .phone .screen .type .send .arrow::before{
+	content: "";
+	height: 30%;
+	width: 4px;
+	background-color: white;
+	border-radius: 10px;
+	position: absolute;
+	top: 10px;
+	transform: rotate(-38deg);
+}
+
+.container .phone .screen .type .send .arrow::after{
+	content: "";
+	height: 30%;
+	width: 4px;
+	background-color: white;
+	border-radius: 10px;
+	position: absolute;
+	bottom: 10px;
+	transform: rotate(38deg);
+}
+
+.container .booking {
+	width: 30%;
+	z-index: 100;
+}
+
+.container .booking h1 {
+	font-size: 56px;
+	color: hsl(271, 36%, 24%);
+	font-family: Rubik;
+	font-weight: 500;
+}
+
+.container .booking p {
+	font-size: 21px;
+	color: hsl(276, 100%, 81%);
+	font-family: Rubik;
+	line-height: 1.5;
+}
+
+.container .phone .screen .chat #load {
+	height: 40px;
+	width: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3px;
+	border-radius: 50% 50% 50% 0;
+	position: absolute;
+	bottom: 83px;
+	background-color: white;
+}
+
+.container .phone .screen .chat #load span {
+	height: 7px;
+	width: 7px;
+	background-color: hsl(206, 6%, 79%);
+	border-radius: 50%;
+	
+}
