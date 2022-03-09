@@ -6,14 +6,17 @@
 body {
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+	height: 100vh;
+	background-color: hsl(270, 20%, 96%);
+	display: flex;
+	justify-content: center;
 }
 
 .container {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 	position: relative;
-	background-color: hsl(270, 20%, 96%);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -45,8 +48,8 @@ body {
 }
 
 .container .phone {
-	height: 770px;
-	width: 420px;
+	height: 750px;
+	width: 400px;
 	background-color: white;
 	display: flex;
 	align-items: center;
@@ -54,6 +57,7 @@ body {
 	border-radius: 43px;
 	position: relative;
 	padding: 15px;
+	box-shadow: 0 0 100px 2px rgba(110, 93, 126, 0.7);
 }
 
 .container .phone .void {
@@ -85,7 +89,7 @@ body {
 	border-bottom-left-radius: 7px;
 	border-bottom-right-radius: 7px; 
 	background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
-	padding: 0 20px 25px 20px;
+	padding: 0 20px 22px 20px;
 	display: flex;
 	align-items: flex-end;
 }
@@ -223,12 +227,6 @@ body {
 	width: 65%;
 }
 
-.container .phone .screen .chat .second_chat .photos img{
-	height: 65px;
-	width: 65px;
-	border-radius: 15px;
-}
-
 .container .phone .screen .chat .second_chat .msg {
 	width: fit-content;
 	align-self: flex-end;
@@ -241,13 +239,20 @@ body {
 }
 
 .container .phone .screen .chat .second_chat .photos {
+	width: fit-content;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	gap: 10px;
 	background-color: transparent;
 	padding: 0;
+}
+
+.container .phone .screen .chat .second_chat .photos img{
+	height: 65px;
+	width: 65px;
+	border-radius: 15px;
+	margin-left: 10px;
 }
 
 .container .phone .screen .chat .third_chat {
@@ -402,5 +407,126 @@ body {
 	width: 7px;
 	background-color: hsl(206, 6%, 79%);
 	border-radius: 50%;
+}
+
+@media (max-width: 800px)
+{
+	.container {
+		height: 160%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10vw;
+	}
+
+	.container .booking {
+		width: 90%;
+		z-index: 100;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 	
+	.container .booking h1 {
+		font-size: 48px;
+		color: hsl(271, 36%, 24%);
+		font-family: Rubik;
+		font-weight: 500;
+	}
+	
+	.container .booking p {
+		font-size: 21px;
+		color: hsl(276, 100%, 81%);
+		font-family: Rubik;
+		line-height: 1.5;
+		text-align: center;
+	}
+}
+
+@media (max-width: 450px)
+{
+	.container {
+		height: 160%;
+	}
+
+	.container .left_shape {
+		height: 40%;
+		width: 50%;
+		background: linear-gradient(to top right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+		border-bottom-left-radius: 20%;
+		border-bottom-right-radius: 20%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
+
+	.container .phone {
+		height: 770px;
+		width: 90%;
+	}
+}
+
+@media (max-width: 380px) {
+	.container .phone {
+		height: 670px;
+	}
+
+	.container .phone .void {
+		height: 40px;
+	}
+
+	.container .phone .screen .profile_content {
+		padding: 0 20px 17px 20px;
+	}
+
+	.container .phone .screen .chat {
+		gap: 15px;
+	}	
+
+	.container .phone .screen .chat .first_chat{
+		width: 75%;
+		gap: 10px;
+	}
+
+	.container .phone .screen .chat .second_chat {
+		gap: 10px;
+		width: 75%;
+	}
+	
+	.container .phone .screen .chat .second_chat .photos img{
+		height: 57px;
+		width: 57px;
+		border-radius: 15px;
+	}
+
+	.container .phone .screen .chat .third_chat {
+		gap: 10px;
+		width: 75%;
+	}
+	
+	.container .phone .screen .chat .third_chat .pricing {
+		padding: 9px 17px;
+	}
+
+	.container .phone .screen .type {
+		height: 45px;
+		width: 93%;
+		bottom: 13px;
+	}
+	
+	.container .phone .screen .type .send {
+		height: 35px;
+		width: 35px;
+	}
+
+	.container .phone .screen .type .send .arrow::before{
+		top: 9px;
+	}
+	
+	.container .phone .screen .type .send .arrow::after{
+		bottom: 9px;
+	}
+
 }
