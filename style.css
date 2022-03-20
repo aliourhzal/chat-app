@@ -558,3 +558,9 @@ body {
 	}
 
 }
+
+@media (max-width: 355px) {
+	.container .phone {
+		height: 700px;
+	}
+}
